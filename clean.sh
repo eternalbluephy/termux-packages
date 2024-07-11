@@ -48,7 +48,7 @@ fi
 		# For on-device build cleanup /data shouldn't be erased.
 		rm -Rf "$TERMUX_TOPDIR"
 	else
-		find /data -mindepth 1 ! -regex '^/data/data/com.termux/cgct\(/.*\)?' -delete 2> /dev/null || true
+		find /data -mindepth 1 ! -regex '^/data/data/com.etnvo1d.droiddev/cgct\(/.*\)?' -delete 2> /dev/null || true
 		rm -Rf "$TERMUX_TOPDIR"
 	fi
 } 5< "$TERMUX_BUILD_LOCK_FILE"
