@@ -17,18 +17,19 @@ termux_step_make_install() {
 	mkdir -p "$GPG_SHARE_DIR"
 
 	# Maintainer-specific keys.
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/agnostic-apollo.gpg" "$GPG_SHARE_DIR"
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/grimler.gpg" "$GPG_SHARE_DIR"
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/kcubeterm.gpg" "$GPG_SHARE_DIR"
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/landfillbaby.gpg" "$GPG_SHARE_DIR"
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/mradityaalok.gpg" "$GPG_SHARE_DIR"
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/2096779623.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/agnostic-apollo.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/grimler.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/kcubeterm.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/landfillbaby.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/mradityaalok.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/2096779623.gpg" "$GPG_SHARE_DIR"
+	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/droiddev.gpg" "$GPG_SHARE_DIR"
 
 	# Key for automatic builds (via CI).
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/termux-autobuilds.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/termux-autobuilds.gpg" "$GPG_SHARE_DIR"
 
 	# Key for pacman package manager.
-	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/termux-pacman.gpg" "$GPG_SHARE_DIR"
+	# install -Dm600 "$TERMUX_PKG_BUILDER_DIR/termux-pacman.gpg" "$GPG_SHARE_DIR"
 
 	# Create symlinks under all GPG_DIRs to key files under GPG_SHARE_DIR
 	for GPG_DIR in "$TERMUX_PREFIX/etc/apt/trusted.gpg.d" "$TERMUX_PREFIX/share/pacman/keyrings"; do

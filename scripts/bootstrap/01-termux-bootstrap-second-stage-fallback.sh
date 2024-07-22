@@ -19,6 +19,8 @@
 	# The shell should still load if second stage run below fails.
 	if [ ! -L "@TERMUX_BOOTSTRAP_CONFIG_DIR_PATH@/termux-bootstrap-second-stage.sh.lock" ]; then
 		echo "Starting fallback run of termux bootstrap second stage"
+		# Adding executable permission to script.
+		chmod +x "@TERMUX_BOOTSTRAP_CONFIG_DIR_PATH@/termux-bootstrap-second-stage.sh"
 		"@TERMUX_BOOTSTRAP_CONFIG_DIR_PATH@/termux-bootstrap-second-stage.sh" || exit $?
 	fi
 

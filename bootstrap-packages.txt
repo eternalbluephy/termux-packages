@@ -1,0 +1,1 @@
+apt bash command-not-found proot coreutils dash diffutils findutils gawk grep gzip less procps psmisc sed tar termux-exec termux-keyring termux-tools util-linux ed debianutils dos2unix inetutils lsof nano net-tools patch unzip
