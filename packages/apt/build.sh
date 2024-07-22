@@ -74,7 +74,7 @@ termux_step_pre_configure() {
 termux_step_post_make_install() {
 	{
 		echo "# The main droiddev repository"
-		echo "deb http://8.219.162.213/ droiddev main"
+		echo "deb http://8.219.162.213/ stable main"
 	} > $TERMUX_PREFIX/etc/apt/sources.list
 
 	# apt-transport-tor
